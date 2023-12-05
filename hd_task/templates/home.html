@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+</head>
+<body>
+    <div class="container">
+        <h1><center>Students Exam Score</h1></center>
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+          <center><label for="csv-file">Choose a CSV file:</label></center>
+          <input type="file" id="csv-file" name="csv-file" accept=".csv" required>
+          <button type="submit">Upload and Read</button>
+        <div id="output"></div>
+    </div>
+</body>
+</html>
