@@ -8,10 +8,12 @@
 <body>
     <div class="container">
         <h1><center>Students Exam Score</h1></center>
-        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <form id="upload-form" action="{% url 'prompt' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
           <center><label for="csv-file">Choose a CSV file:</label></center>
-          <input type="file" id="csv-file" name="csv-file" accept=".csv" required>
+          <input type="file" id="csv-file" name="csv_file" accept=".text/csv" required>
           <button type="submit">Upload and Read</button>
+        </form>
         <div id="output"></div>
     </div>
 </body>
